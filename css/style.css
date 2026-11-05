@@ -1,0 +1,166 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #0b0f19, #111827);
+    color: #f3f4f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.app-container {
+    max-width: 900px;
+    width: 100%;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    color: #f59e0b;
+    margin: 0 0 10px 0;
+    font-size: 2.5rem;
+}
+
+.tagline {
+    color: #9ca3af;
+    font-size: 1.1rem;
+}
+
+.ticker-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.ticker-card {
+    background: #1f2937;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #374151;
+    text-align: center;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.ticker-card h3 {
+    margin: 0 0 10px 0;
+}
+
+.ticker-card.btc h3 { color: #f59e0b; }
+.ticker-card.eth h3 { color: #a78bfa; }
+.ticker-card.bnb h3 { color: #facc15; }
+
+.price {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.asset-label {
+    font-size: 0.8rem;
+    color: #6b7280;
+}
+
+.wallet-box {
+    background: rgba(31, 41, 55, 0.6);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+}
+
+.wallet-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.btn-connect {
+    background-color: #f59e0b;
+    color: #111827;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-connect:hover {
+    background-color: #d97706;
+}
+
+.import-container {
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.btn-import {
+    background-color: #e2761b; /* Color institucional MetaMask */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 0.95rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+    box-shadow: 0 4px 12px rgba(226, 118, 27, 0.2);
+}
+
+.btn-import:hover {
+    background-color: #d26912;
+}
+
+.address-text {
+    font-size: 0.9rem;
+    color: #9ca3af;
+    word-break: break-all;
+    margin: 0;
+}
+
+.balance-container {
+    border-top: 1px solid #374151;
+    padding-top: 20px;
+}
+
+.balance-container h3 {
+    margin-top: 0;
+    color: #e5e7eb;
+}
+
+.balance-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+.promo-notice {
+    font-size: 0.85rem;
+    color: #f43f5e;
+    margin-top: 20px;
+    background: rgba(244, 63, 94, 0.1);
+    padding: 10px;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.status-bar {
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 20px;
+    font-weight: 500;
+}
+
+.hidden { display: none; }
