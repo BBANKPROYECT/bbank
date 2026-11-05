@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BANK - Swap Directo</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Ethers.js para conectar la Web3 con MetaMask -->
+    <script src="https://cloudflare.com"></script>
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>Swap Directo BANK</h1>
+            <p class="tagline">Compra sin intermediarios. Indexado a Bitcoin vía Chainlink</p>
+        </header>
+
+        <!-- Módulo de Venta Directa (Swap) -->
+        <section class="wallet-box swap-box">
+            <div class="wallet-header">
+                <button id="connectBtn" class="btn-connect">Conectar MetaMask</button>
+                <p id="walletAddress" class="address-text">No conectado</p>
+            </div>
+
+            <div class="swap-interface">
+                <div class="input-group">
+                    <label for="bnbInput">Tú envías (BNB):</label>
+                    <input type="number" id="bnbInput" placeholder="Ej: 0.5" step="0.01" min="0.11">
+                    <span class="fee-notice">* Incluye 0.1 BNB de comisión fija para el Owner</span>
+                </div>
+                
+                <div class="input-group">
+                    <label>Tú recibes (Tokens estimados):</label>
+                    <div class="estimated-outputs">
+                        <p>🔹 <span id="estBBANK">0.00</span> BBANK (+200% incluido)</p>
+                        <p>🔸 <span id="estEBANK">0.00</span> EBANK (Anexo ETH)</p>
+                        <p>🔸 <span id="estBNBANK">0.00</span> BNBANK (Anexo BNB)</p>
+                    </div>
+                </div>
+
+                <button id="buyBtn" class="btn-buy" disabled>Ejecutar Compra Directa</button>
+                <button id="addTokensBtn" class="btn-import hidden" style="margin-top: 15px; width: 100%;">存放 Importar Activos a MetaMask</button>
+            </div>
+        </section>
+
+        <!-- Panel Informativo Opcional para mostrar el Oráculo Base -->
+        <section class="ticker-grid" style="margin-top: 30px;">
+            <div class="ticker-card btc" style="max-width: 100%; margin: 0 auto;">
+                <h3>Referencia Bitcoin (Oráculo Base)</h3>
+                <p id="btcPrice" class="price">Cargando...</p>
+                <span class="asset-label">Sincronizado con Chainlink Data Feed en BSC</span>
+            </div>
+        </section>
+
+        <p id="globalStatus" class="status-bar"></p>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+</html>
